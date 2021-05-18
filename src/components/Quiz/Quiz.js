@@ -106,6 +106,112 @@ const animalQuestions = [
         correct: 'waterland',
         questionId: 15
       },
+    ]
+
+const spaceQuestions = [
+        {
+          question:
+            'What is the bright glow around the “head” of a comet called?',
+          answers: ['Ring', 'Coma', 'Halo', 'Crown'],
+          correct: 'Coma',
+          questionId: 1
+        },
+        {
+            question:
+              'Which of the following did people used to think seeing a comet signified?',
+            answers: ['Disaster', 'Disease', 'Death', 'All the above'],
+            correct: 'All the above',
+            questionId: 2
+          },
+          {
+            question:
+              'What is the name of the famous comet that can be seen from Earth about every 75 years?',
+            answers: ['Hale-Bopp', 'Shoemaker-Levy 9', 'Halley’s Comet', 'Pluto'],
+            correct: 'Halley’s Comet',
+            questionId: 3
+          },
+          {
+            question:
+              'How many tails does a comet have?',
+            answers: ['Most have 2', 'Only 1', 'Roughly 3', 'At least 5' ],
+            correct: 'Most have 2',
+            questionId: 4
+          },
+          {
+            question:
+              'What is the name of a well known meteor shower that peaks in August each year?',
+            answers: ['Persieds','Pleiades', 'Summer Shower', 'Orion'],
+            correct: 'Perseids',
+            questionId: 5
+          },
+          {
+            question:
+              'What is the scientific name for a shooting star?',
+            answers: ['Comet', 'Asteroid', 'Falling star', 'Meteor'],
+            correct: 'Meteor',
+            questionId: 6
+          },
+          {
+            question:
+              'What is the name of a well known meteor shower that peaks each November?',
+            answers: ['Leonids', 'Linus', 'Northern Lights', 'Winter Shower'],
+            correct: 'Leonids',
+            questionId: 7
+          },
+        ]
+const socialStudiesQuestions = [
+    {
+        question:
+            'Which ocean is off the California coast?',
+        answers: ['Atlantic', 'Indian', 'Pacific', 'Red sea'],
+        correct: 'Pacific',
+        questionId: 1
+    },
+    {
+        question:
+            'What is something you hit with a hammer?',
+        answers: ['Screw', 'Rubberband', 'Nail', 'Wrench'],
+        correct: 'Nail',
+        questionId: 2
+    },
+    {
+        question:
+            'What colors are the stars on the American flag?',
+        answers: ['Red', 'Orange', 'Blue', 'White'],
+        correct: 'White',
+        questionId: 3
+    },
+    {
+        question:
+            'What fruit do kids traditionally give to teachers?',
+        answers: ['Pizza', 'Orange', 'Apple', 'iPod'],
+        correct: 'Apple',
+        questionId: 4
+    },
+    {
+        question:
+            'What do you use to write on a blackboard?',
+        answers: ['Grapes', 'Sharpie', 'Crayon', 'Chalk'],
+        correct: 'Chalk',
+        questionId: 5
+    },
+    {
+        question:
+            'Which ocean is off the California coast?',
+        answers: ['Atlantic', 'Indian', 'Pacific', 'Red sea'],
+        correct: 'Pacific',
+        questionId: 0
+    },
+    {
+        question:
+            'What is something you hit with a hammer?',
+        answers: ['Screw', 'Rubberband', 'Nail', 'Wrench'],
+        correct: 'Nail',
+        questionId: 0
+    },
+
+
+
 
 function Quiz(props) {
     return (
