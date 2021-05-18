@@ -1,7 +1,8 @@
 import React, { useRef } from 'react';
+import styles from '../CreateQuiz/CreateQuiz.module.css';
+import NavBar from '../NavBar/NavBar';
 
-
-function CreateQuiz() {
+const CreateQuiz = () => {
   const question = useRef(null);
   const correctAnswer = useRef(null);
   const incorrectAnswer1 = useRef(null);
@@ -23,28 +24,42 @@ function CreateQuiz() {
 
   return (
     <div>
-      <form onSubmit={handleFormSubmit}>
+      <NavBar />
+      <form className={styles['form-container']} onSubmit={handleFormSubmit}>
+        <div className={styles['input-fields']}>
         <label htmlFor="question">
-          Question: <input type="text" ref={question} />
+          <input type="text" ref={question} placeholder="What's your question?"/>
         </label>
         <br />
         <label htmlFor="correctAnswer">
-          Correct Question: <input type="text" ref={correctAnswer} />
+          <p className={styles['choices-header']} >
+            Choices (Correct First)
+          </p>
+          <input type="text" ref={correctAnswer} placeholder="Choice 1"/>
         </label>
         <br />
         <label htmlFor="incorrectAnswer1">
-          Incorrect Answer 1: <input type="text" ref={incorrectAnswer1} />
+          <input type="text" ref={incorrectAnswer1} placeholder="Choice 2"/>
         </label>
         <br />
-        <label htmlFor="incorrectAnswer1">
-          Incorrect Answer 2: <input type="text" ref={incorrectAnswer2} />
+        <label htmlFor="incorrectAnswer2">
+          <input type="text" ref={incorrectAnswer2} placeholder="Choice 3"/>
         </label>
         <br />
-        <label htmlFor="incorrectAnswer1">
-          Incorrect Answer 3: <input type="text" ref={incorrectAnswer3} />
+        <label htmlFor="incorrectAnswer3">
+          <input type="text" ref={incorrectAnswer3} placeholder="Choice 4"/>
         </label>
-        <input type="submit" value="submit" />
+        </div>
+        <div className={styles['bottom-divider']}>
+          <span></span>
+        </div>
+        <button type="submit" className={styles['add-button']}>
+          <i className="fas fa-plus fa-lg"></i>
+        </button>
+          
       </form>
+      
+      
     </div>
   )
 }
