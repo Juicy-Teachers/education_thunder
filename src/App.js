@@ -42,7 +42,7 @@ function App() {
       categoryNum: categoryNum,
       setCategoryNum: setCategoryNum
     }}>
-      <Router>
+      <Router >
         <Switch>
           {
             routes.map(({Component, key, path}) => {
