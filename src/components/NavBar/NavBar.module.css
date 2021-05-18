@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  background-color: #65BAB6;
 }
 
 .nav-icons {
@@ -18,5 +19,9 @@
   padding: 5px;
   margin-left: 2%;
   flex-direction: column;
+}
+
+.nav-icons:hover{
+  background-color: #D33853;
 }
 
