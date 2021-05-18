@@ -7,7 +7,9 @@ import {makeStyles} from "@material-ui/core/styles";
 const useStyles = makeStyles ({
     root: {
         width: "300px",
-        height: "100px"
+        height: "100px",
+        fontSize: '40px',
+        textDecoration: 'none'
     }
 })
 
@@ -15,8 +17,8 @@ export default function IntroPage(props) {
     const btnStyles = useStyles()
     return (
         <div className={styles["intro"]}>
-            <h1 className={styles["title"]}>This is the {props.page}</h1>
-            <Link to='/main'>
+            <h1 className={styles["title"]}>QuizBee</h1>
+            <Link to='/category' style={{textDecoration: 'none'}}>
                 <Button className={btnStyles.root} variant="contained" color="primary" size="large">Play!</Button>
             </Link>
         </div>
