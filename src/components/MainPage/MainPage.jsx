@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 // import styles from './MainPage.module.css';
 import axios from 'axios';
+import NavBar from '../../components/NavBar/NavBar';
 
 const MainPage = () => {
   const [data, setData] = useState([]);
@@ -29,6 +30,7 @@ const MainPage = () => {
   
   return (
     <div>
+      <NavBar />
       <h1>This is the Main Page</h1>
       <h1>{randomQuestion.question}</h1>
       <button onClick={handleClick}>Get Question!</button>
