@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import styles from './IntroPage.module.css';
 import Button from "@material-ui/core/Button";
 import {makeStyles} from "@material-ui/core/styles";
+// import Shark from '../../animation/shark.json';
 import BeeImage from '../../resources/color_logo_transparent.svg';
 
 const useStyles = makeStyles ({
@@ -10,7 +11,8 @@ const useStyles = makeStyles ({
         width: "300px",
         height: "100px",
         fontSize: '40px',
-        textDecoration: 'none'
+        textDecoration: 'none',
+        marginTop: "-50%"
     }
 })
 
@@ -23,8 +25,10 @@ export default function IntroPage(props) {
             <Link to='/category' style={{textDecoration: 'none'}}>
                 <Button className={btnStyles.root} variant="contained" color="primary" size="large">Play!</Button>
             </Link>
+            {/* <Shark lotti={Shark} height={300} width={300}/> */}
+
             <Link to='/create' style={{textDecoration: 'none'}}>
-                <button>
+                <button className={styles['create-btn']}>
                     Create
                 </button>
             </Link>
