@@ -1,13 +1,10 @@
-<<<<<<< HEAD
-# Education Thunder
-=======
 # Quisbee  
 
 ## Hackathon Collaborative Project  
 
 An educational quiz app for kids brought to you by a random group of Engineers, Designers, and Data Scientists 
 
-Live Site: [Quisbee](http://wwww.quisbee.netlify.app)
+Live Site: [Quisbee](http://www.quisbee.netlify.app)
 
 ## UX/UI Design Prototypes
 
