@@ -42,11 +42,18 @@
     transform: scale(1.3);
 }
 
-footer {
+.category-question {
+    font-family: "Grandstander";
+    font-size: 40px;
+    font-weight: 600px;
+}
+
+.footer {
     bottom: 0;
     z-index: 6;
-    position: absolute;
+    position: fixed;
     text-align: center;
     width: 100%;
-    height: 20vh;
+    height: 10%;
+    background-color: #65BAB6;
 }

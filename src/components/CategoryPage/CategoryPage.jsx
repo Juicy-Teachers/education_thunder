@@ -53,8 +53,8 @@ export default function CategoryPage() {
                 }
                 </div>
             </main>  
-            <footer className={styles["footer"]}>
-                <h2>What would you like to learn?</h2>
+            <footer className={styles['footer']}>
+                <h2 className={styles['category-question']}>What would you like to learn?</h2>
             </footer>
         </div>
     )
