@@ -5,6 +5,7 @@ import NavBar from '../NavBar/NavBar'
 import {useHistory} from 'react-router-dom'
 import Animals from '../../images/Quisbee_animals.png';
 import Apple from '../../images/Quisbee_apple.png';
+import SocialStudies from '../../images/Quisbee_SS.png';
 
 export default function CategoryPage() {
     const context = useContext(TheContext)
@@ -19,7 +20,7 @@ export default function CategoryPage() {
         {
             name: "Social Studies",
             key: 'social studies',
-            // photo_url: Apple
+            photo_url: SocialStudies
         },
         {
             name: 'Food',
