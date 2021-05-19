@@ -27,7 +27,7 @@ const MainPage = () => {
         console.error(err)
       }
     })()
-  }, [])
+  }, [toggleButton])
 
   const handleNextQues = () => {
     setToggleButton(!toggleButton)
