@@ -4,6 +4,7 @@ import TheContext from '../../context/index'
 import NavBar from '../NavBar/NavBar'
 import {useHistory} from 'react-router-dom'
 import Animals from '../../images/Quisbee_animals.png';
+import Apple from '../../images/Quisbee_apple.png';
 
 export default function CategoryPage() {
     const context = useContext(TheContext)
@@ -17,11 +18,13 @@ export default function CategoryPage() {
         },
         {
             name: "Social Studies",
-            key: 'social studies'
+            key: 'social studies',
+            // photo_url: Apple
         },
         {
             name: 'Food',
             key: 'food',
+            photo_url: Apple
         },
         {
             name: 'Money',
