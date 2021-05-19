@@ -7,6 +7,7 @@ import Animals from '../../images/Quisbee_animals.png';
 import Apple from '../../images/Quisbee_apple.png';
 import SocialStudies from '../../images/Quisbee_SS.png';
 import Money from '../../images/Quisbee_book.png';
+import Space from '../../images/Quisbee_globe.png';
 
 export default function CategoryPage() {
     const context = useContext(TheContext)
@@ -35,7 +36,8 @@ export default function CategoryPage() {
         },
         {
             name: 'Space',
-            key: 'space'
+            key: 'space',
+            photo_url: Space
         }
     ]
 
