@@ -1,10 +1,14 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
-import styles from './IntroPage.module.css'
+import {Link} from 'react-router-dom';
+import styles from './IntroPage.module.css';
 import Button from "@material-ui/core/Button";
 import {makeStyles} from "@material-ui/core/styles";
+<<<<<<< HEAD
 // import Shark from '../../animation/shark.json';
 import BeeImage from '../../resources/color_logo_transparent.svg'
+=======
+import BeeImage from '../../resources/color_logo_transparent.svg';
+>>>>>>> origin/dev
 
 const useStyles = makeStyles ({
     root: {
