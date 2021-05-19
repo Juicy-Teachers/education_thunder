@@ -112,7 +112,9 @@ const MainPage = () => {
         </div>
         :
         <div className={styles['start-btn-div']}>
-          <button className={styles['start-btn']} onClick={handleStart}>Start!</button>
+          <button className={styles['start-btn']} onClick={handleStart}>
+            <p className={styles['start-word']}>Start!</p>
+          </button>
         </div>
       }
     </div>

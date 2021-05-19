@@ -50,12 +50,12 @@
 }
 
 .start-btn-div {
-  
+  margin-top: 10%;
 }
 
 .start-btn {
-  width: 125px;
-  height: 30px;
+  width: 200px;
+  height: 100px;
   border: none;
   border-radius: 20px;
   background-color: #61B775;
@@ -63,6 +63,11 @@
   font-weight: bolder;
   margin-left: 45%;
   margin-bottom: 50%;
+}
+
+.start-word {
+  font-size: 30px;
+  font-weight: bolder;
 }
 
 .question-container {
