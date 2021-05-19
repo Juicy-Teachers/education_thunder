@@ -57,7 +57,7 @@ export default function CategoryPage() {
                             <div className={styles["buttons"]}> 
                                 <h1>{name}</h1>
                                 <img src={photo_url}/>
-                                <button onClick={handleClick} value={key} key={key}>Select</button>
+                                <button className={styles['select-btn']} onClick={handleClick} value={key} key={key}>Select</button>
                             </div>
                         )
                     })

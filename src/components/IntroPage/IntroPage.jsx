@@ -11,7 +11,8 @@ const useStyles = makeStyles ({
         width: "300px",
         height: "100px",
         fontSize: '40px',
-        textDecoration: 'none'
+        textDecoration: 'none',
+        marginTop: "-50%"
     }
 })
 
@@ -27,7 +28,7 @@ export default function IntroPage(props) {
             {/* <Shark lotti={Shark} height={300} width={300}/> */}
 
             <Link to='/create' style={{textDecoration: 'none'}}>
-                <button>
+                <button className={styles['create-btn']}>
                     Create
                 </button>
             </Link>
