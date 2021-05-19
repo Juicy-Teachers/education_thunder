@@ -44,11 +44,13 @@
   flex-wrap: wrap;
   background-image: url(../../resources/QuisbeeBackground.png);
   background-size: 1500px 780px;
+  overflow: hidden;
   position: fixed; 
   top: 0; 
   left: 0;
   min-width: 100%;
   min-height: 100%;
+  margin-top: 10%;
 }
 
 .render-question {
