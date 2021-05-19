@@ -2,7 +2,6 @@ import React, { useState, useEffect, useContext } from 'react';
 import styles from './MainPage.module.css';
 import axios from 'axios';
 import NavBar from '../../components/NavBar/NavBar';
-import APIurl from '../../config';
 import TheContext from '../../context/index';
 
 
@@ -47,8 +46,6 @@ const MainPage = () => {
     return timer
   }
     
- 
-
   const handleNextQues = () => {
     setToggleButton(!toggleButton)
   }
@@ -64,13 +61,6 @@ const MainPage = () => {
   const handleStart = () => {
     setStart(true)
   }
-
-  //click the right choice
-    //+= 100
-  //click wrong choice
-    //do nothing
-  //click the right choice after the wrong choice once
-    //+= 50
 
   const correctChoice = () => {
     setScore(score + 100)
@@ -91,15 +81,16 @@ const MainPage = () => {
         <div className={styles['scoreboard']}>
           <div className={styles['current-score']}>
             {score}
+            <p className={styles['score-word']}>Score</p>
           </div>
         </div>
         <div className={styles['timer']}>
           <div className={styles['time-remaining']}>
             {timerFunc(60)}
+            <p className={styles['time-word']}>Time</p>
           </div>
         </div>
       </div>
-
       {
         gameOver?
         <h1>Times Up!</h1>
@@ -109,15 +100,13 @@ const MainPage = () => {
           <h1 className={styles['render-question']}>
             {randomQuestion.question}
           </h1>
-          <div className={styles['choices-btns']}>
+          <div className={styles['choices-div']}>
             {
-              
               randomQuestion.answers.map((answer) => {
                 return (
-                  <button onClick={handleScore} value={answer}>{answer}</button>
+                  <button className={styles['choices-btn']} onClick={handleScore} value={answer}>{answer}</button>
                 )
               })
-              
             }
           </div>
           <button className={styles['next-btn']} onClick={handleNextQues}>
@@ -126,7 +115,6 @@ const MainPage = () => {
         </div>
         :
         <button onClick={handleStart}>Start!</button>
-
       }
     </div>
   )
