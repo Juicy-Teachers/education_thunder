@@ -43,9 +43,10 @@
   flex-direction: column;
   flex-wrap: wrap;
   background-image: url(../../resources/QuisbeeBackground.png);
-  background-size: 1500px 780px;
+  background-size: cover;
   overflow: hidden;
   position: fixed; 
+  background-repeat: no-repeat;
   top: 0; 
   left: 0;
   min-width: 100%;
