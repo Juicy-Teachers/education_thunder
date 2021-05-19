@@ -1,9 +1,9 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
-import styles from './IntroPage.module.css'
+import {Link} from 'react-router-dom';
+import styles from './IntroPage.module.css';
 import Button from "@material-ui/core/Button";
 import {makeStyles} from "@material-ui/core/styles";
-import BeeImage from '../../resources/color_logo_transparent.svg'
+import BeeImage from '../../resources/color_logo_transparent.svg';
 
 const useStyles = makeStyles ({
     root: {

@@ -2,8 +2,8 @@ import React, { useState, useEffect, useContext } from 'react';
 import styles from './MainPage.module.css';
 import axios from 'axios';
 import NavBar from '../../components/NavBar/NavBar';
-import APIurl from '../../config'
-import TheContext from '../../context/index'
+import APIurl from '../../config';
+import TheContext from '../../context/index';
 
 const MainPage = () => {
   const [randomQuestion, setRandomQuestion] = useState({});
@@ -53,6 +53,7 @@ const MainPage = () => {
     })()
   }, [toggleButton])
   
+  console.log(randomQuestion.answers);
   return (
     <div>
       <NavBar />
