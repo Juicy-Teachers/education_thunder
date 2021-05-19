@@ -1,5 +1,5 @@
 .main {
-    height: 80vh;
+    height: 100vh;
     width: fill-available;
     border: 1px solid black;
     display: flex;
@@ -7,7 +7,8 @@
     justify-content: center;
     background-image: url(../../resources/QuisbeeBackground.png);
     background-size: 1500px 780px;
-    position: fixed; 
+    background-size: cover;
+    position: fill; 
     top: 0; 
     left: 0;
     min-width: 100%;
@@ -47,4 +48,5 @@ footer {
     position: absolute;
     text-align: center;
     width: 100%;
+    height: 20vh;
 }
