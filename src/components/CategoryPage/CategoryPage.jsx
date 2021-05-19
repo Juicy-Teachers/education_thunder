@@ -1,8 +1,8 @@
-import React, {useState, useContext} from 'react'
+import React, { useContext } from 'react'
 import styles from '../CategoryPage/Category.module.css'
 import TheContext from '../../context/index'
 import NavBar from '../NavBar/NavBar'
-import {useHistory} from 'react-router-dom'
+import {useHistory} from 'react-router-dom';
 import Animals from '../../images/Quisbee_animals.png';
 import Apple from '../../images/Quisbee_apple.png';
 import SocialStudies from '../../images/Quisbee_SS.png';
