@@ -5,6 +5,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import APIurl from '../../config'
 
 const MainPage = () => {
+  const [correctAnswer, setCorrectAnswer] = useState("");
   const [randomQuestion, setRandomQuestion] = useState({});
   const [toggleButton, setToggleButton] = useState(true);
   const [score, setScore] = useState(0);
@@ -16,7 +17,7 @@ const MainPage = () => {
   }
 
   const handleScore = (event) => {
-      if(event.target.value == randomQuestion.correct) {
+      if(event.target.value == correctAnswer) {
         correctChoice()
       } else {
         incorrectChoice()
@@ -44,12 +45,15 @@ const MainPage = () => {
       try {
         const response = await axios.get(`https://quisbee.herokuapp.com/trivia`);
         setRandomQuestion(response.data[Math.floor(Math.random() * response.data.length)])
+        setCorrectAnswer(randomQuestion.correct);
+        console.log(randomQuestion)
       } catch (err) {
         console.error(err)
       }
     })()
   }, [toggleButton])
   
+  console.log(randomQuestion.answers);
   return (
     <div>
       <NavBar />
@@ -70,16 +74,13 @@ const MainPage = () => {
           {randomQuestion.question}
         </h1>
         <div className={styles['choices-btns']}>
-          {
-            randomQuestion.answers.length ?
+          {/* {
             randomQuestion.answers.map((answer) => {
               return (
                 <button onClick={handleScore} value={answer}>{answer}</button>
               )
             })
-            :
-            ""
-          }
+          } */}
         </div>
         <button className={styles['next-btn']} onClick={handleNextQues}>
           <p className={styles['next-question']}>NEXT QUESTION</p>
