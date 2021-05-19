@@ -1,0 +1,28 @@
+.navbar-container{
+  width: fill-available;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #EFF1F4;
+  z-index: 4;
+  position: relative;
+  top: 0;
+}
+
+.nav-icons {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5px;
+  margin-left: 2%;
+  flex-direction: column;
+  color: white;
+}
+
+.icon-name {
+  font-family: "Grandstander";
+}
