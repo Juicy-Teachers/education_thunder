@@ -5,18 +5,39 @@ import NavBar from '../../components/NavBar/NavBar';
 
 const MainPage = () => {
   const [data, setData] = useState([]);
-  const [randomQuestion, setRandomQuestion] = useState({})
-  const [toggleButton, setToggleButton] = useState(true)
+  const [randomQuestion, setRandomQuestion] = useState({});
+  const [toggleButton, setToggleButton] = useState(true);
+  const [score, setScore] = useState(0);
+  const [timer, setTimer] = useState([]);
   // const [category, setCategory] = useState('')
 
   const handleClick = () => {
     setToggleButton(!toggleButton)
   }
 
-  
+  // const handleScore = () => {
+  //   if correctChoice onClick setScore += 100
+  // else if second click === correctChoice setScore += 50
+  //   else do nothing 
+  // }
+
+  //click the right choice
+    //+= 100
+  //click wrong choice
+    //do nothing
+  //click the right choice after the wrong choice once
+    //+= 50
+
+  const correctChoice = () => {
+    setScore(+100)
+  }
+
+  const incorrectChoice = () => {
+    setScore(-50)
+  }
 
   useEffect(() => {
-    ( async() => {
+    (async() => {
       try {
         const response = await axios.get(`https://opentdb.com/api.php?amount=13&category=27&difficulty=easy&type=multiple`);
         setData(response.data.results);
@@ -30,15 +51,27 @@ const MainPage = () => {
   return (
     <div>
       <NavBar />
+      <div className={styles['score-timer-container']}>
+        <div className={styles['scoreboard']}>
+          <div className={styles['current-score']}>
+            {score}
+          </div>
+        </div>
+        <div className={styles['timer']}>
+          <div className={styles['time-remaining']}>
+            {timer}
+          </div>
+        </div>
+      </div>
       <div className={styles['question-container']}>
         <h1 className={styles['render-question']}>
           {randomQuestion.question}
         </h1>
         <div className={styles['choices-btns']}>
-          <button>Choice 1</button>
-          <button>Choice 2</button>
-          <button>Choice 3</button>
-          <button>Choice 4</button>
+          <button onClick={() => correctChoice()}>Choice 1</button>
+          <button onClick={() => incorrectChoice()}>Choice 2</button>
+          <button onClick={() => incorrectChoice()}>Choice 3</button>
+          <button onClick={() => incorrectChoice()}>Choice 4</button>
         </div>
         <button className={styles['next-btn']} onClick={handleClick}>
           <p className={styles['next-question']}>NEXT QUESTION</p>
@@ -46,8 +79,6 @@ const MainPage = () => {
       </div>
     </div>
   )
-
-
 }
 
 export default MainPage;
