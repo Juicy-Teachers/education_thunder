@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import styles from './IntroPage.module.css'
 import Button from "@material-ui/core/Button";
 import {makeStyles} from "@material-ui/core/styles";
-import Shark from '../../animation/shark.json'
+import Shark from '../../animation/shark.json';
 
 const useStyles = makeStyles ({
     root: {
@@ -22,7 +22,7 @@ export default function IntroPage(props) {
             <Link to='/category' style={{textDecoration: 'none'}}>
                 <Button className={btnStyles.root} variant="contained" color="primary" size="large">Play!</Button>
             </Link>
-            <LottieAnimation lotti={Shark} height={300} width={300} />
+            <Shark lotti={Shark} height={300} width={300}/>
 
         </div>
     )
