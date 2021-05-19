@@ -6,7 +6,7 @@ import {useHistory} from 'react-router-dom'
 import Animals from '../../images/Quisbee_animals.png';
 import Apple from '../../images/Quisbee_apple.png';
 import SocialStudies from '../../images/Quisbee_SS.png';
-import Money from '../../images/Quisbee_book.png';
+import Money from '../../images/Quisbee_money.png';
 import Space from '../../images/Quisbee_space.png';
 
 export default function CategoryPage() {
