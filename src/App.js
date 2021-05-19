@@ -8,6 +8,7 @@ import TheContext from './context/index';
 import CreateQuiz from './components/CreateQuiz/CreateQuiz';
 
 
+
 const routes = [
   {
     Component: MainPage,
@@ -33,14 +34,14 @@ const routes = [
 
 
 function App() {
-  const [categoryNum, setCategoryNum] = useState()
+  const [category, setCategory] = useState()
   
 
 
   return (
     <TheContext.Provider value={{
-      categoryNum: categoryNum,
-      setCategoryNum: setCategoryNum
+      category: category,
+      setCategory: setCategory
     }}>
       <Router >
         <Switch>
