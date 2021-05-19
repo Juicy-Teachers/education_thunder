@@ -2,24 +2,26 @@ import React, { useState, useEffect } from 'react';
 import styles from './MainPage.module.css';
 import axios from 'axios';
 import NavBar from '../../components/NavBar/NavBar';
+import APIurl from '../../config'
 
 const MainPage = () => {
-  const [data, setData] = useState([]);
   const [randomQuestion, setRandomQuestion] = useState({});
   const [toggleButton, setToggleButton] = useState(true);
   const [score, setScore] = useState(0);
   const [timer, setTimer] = useState([]);
   // const [category, setCategory] = useState('')
 
-  const handleClick = () => {
+  const handleNextQues = () => {
     setToggleButton(!toggleButton)
   }
 
-  // const handleScore = () => {
-  //   if correctChoice onClick setScore += 100
-  // else if second click === correctChoice setScore += 50
-  //   else do nothing 
-  // }
+  const handleScore = (event) => {
+      if(event.target.value == randomQuestion.correct) {
+        correctChoice()
+      } else {
+        incorrectChoice()
+      }
+  }
 
   //click the right choice
     //+= 100
@@ -30,6 +32,7 @@ const MainPage = () => {
 
   const correctChoice = () => {
     setScore(+100)
+    handleNextQues()
   }
 
   const incorrectChoice = () => {
@@ -39,9 +42,8 @@ const MainPage = () => {
   useEffect(() => {
     (async() => {
       try {
-        const response = await axios.get(`https://opentdb.com/api.php?amount=13&category=27&difficulty=easy&type=multiple`);
-        setData(response.data.results);
-        setRandomQuestion(response.data.results[Math.floor(Math.random() * response.data.results.length)])
+        const response = await axios.get(`https://quisbee.herokuapp.com/trivia`);
+        setRandomQuestion(response.data[Math.floor(Math.random() * response.data.length)])
       } catch (err) {
         console.error(err)
       }
@@ -68,12 +70,18 @@ const MainPage = () => {
           {randomQuestion.question}
         </h1>
         <div className={styles['choices-btns']}>
-          <button onClick={() => correctChoice()}>Choice 1</button>
-          <button onClick={() => incorrectChoice()}>Choice 2</button>
-          <button onClick={() => incorrectChoice()}>Choice 3</button>
-          <button onClick={() => incorrectChoice()}>Choice 4</button>
+          {
+            randomQuestion.answers.length ?
+            randomQuestion.answers.map((answer) => {
+              return (
+                <button onClick={handleScore} value={answer}>{answer}</button>
+              )
+            })
+            :
+            ""
+          }
         </div>
-        <button className={styles['next-btn']} onClick={handleClick}>
+        <button className={styles['next-btn']} onClick={handleNextQues}>
           <p className={styles['next-question']}>NEXT QUESTION</p>
         </button>
       </div>
