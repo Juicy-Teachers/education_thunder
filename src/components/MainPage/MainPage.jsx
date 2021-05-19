@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import styles from './MainPage.module.css';
 import axios from 'axios';
 import NavBar from '../../components/NavBar/NavBar';
-import APIurl from '../../config'
+import APIurl from '../../config';
+import TheContext from '../../context/index';
 
 const MainPage = () => {
-  const [correctAnswer, setCorrectAnswer] = useState("");
   const [randomQuestion, setRandomQuestion] = useState({});
   const [toggleButton, setToggleButton] = useState(true);
   const [score, setScore] = useState(0);
   const [timer, setTimer] = useState([]);
+  const context = useContext(TheContext)
   // const [category, setCategory] = useState('')
 
   const handleNextQues = () => {
@@ -17,7 +18,7 @@ const MainPage = () => {
   }
 
   const handleScore = (event) => {
-      if(event.target.value == correctAnswer) {
+      if(event.target.value == randomQuestion.correct) {
         correctChoice()
       } else {
         incorrectChoice()
@@ -43,10 +44,9 @@ const MainPage = () => {
   useEffect(() => {
     (async() => {
       try {
-        const response = await axios.get(`https://quisbee.herokuapp.com/trivia`);
-        setRandomQuestion(response.data[Math.floor(Math.random() * response.data.length)])
-        setCorrectAnswer(randomQuestion.correct);
-        console.log(randomQuestion)
+        const res = await axios.get(`https://quisbee.herokuapp.com/trivia`);
+        const response = res.data.filter(question => question.category === context.category)
+        setRandomQuestion(response[Math.floor(Math.random() * response.length)])
       } catch (err) {
         console.error(err)
       }
@@ -71,15 +71,18 @@ const MainPage = () => {
       </div>
       <div className={styles['question-container']}>
         <h1 className={styles['render-question']}>
-          {randomQuestion.question}
+          {/* {randomQuestion.question} */}
         </h1>
         <div className={styles['choices-btns']}>
           {/* {
+            randomQuestion.answers.length ?
             randomQuestion.answers.map((answer) => {
               return (
                 <button onClick={handleScore} value={answer}>{answer}</button>
               )
             })
+            :
+            ""
           } */}
         </div>
         <button className={styles['next-btn']} onClick={handleNextQues}>

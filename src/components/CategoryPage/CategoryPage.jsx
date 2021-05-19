@@ -5,33 +5,36 @@ import NavBar from '../NavBar/NavBar'
 import {useHistory} from 'react-router-dom'
 
 export default function CategoryPage() {
-
     const context = useContext(TheContext)
     const history = useHistory()
 
     const buttons = [
         {
             name: 'Animals',
-            key: 'animal',
-            value: 27
+            key: 'animals',
         },
         {
             name: "Social Studies",
-            key: 'social-studies'
+            key: 'social studies'
         },
         {
-            name: 'Science',
-            key: 'science',
-            value: 17
+            name: 'Food',
+            key: 'food',
+        },
+        {
+            name: 'Money',
+            key: 'money'
+        },
+        {
+            name: 'Space',
+            key: 'space'
         }
     ]
 
     const handleClick = (event) => {
-        context.setCategoryNum(event.target.value)
+        context.setCategory(event.target.value)
         history.replace('/main')
     }
-
-
 
     return(
         <div>
@@ -43,7 +46,7 @@ export default function CategoryPage() {
                         return (
                             <div className={styles["buttons"]}> 
                                 <h1>{name}</h1>
-                                <button onClick={handleClick} value={value} key={key}>Select</button>
+                                <button onClick={handleClick} value={key} key={key}>Select</button>
                             </div>
                         )
                     })
