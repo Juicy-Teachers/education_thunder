@@ -42,6 +42,16 @@
     transform: scale(1.3);
 }
 
+.select-btn {
+    width: 125px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    background-color: #61B775;
+    color: white;
+    font-weight: bolder;
+}
+
 .category-question {
     font-family: "Grandstander";
     font-size: 40px;

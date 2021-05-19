@@ -13,9 +13,18 @@
     left: 0;
     min-width: 100%;
     min-height: 100%;
-
 }
 
 .title {
     font-size: 200px;
+}
+
+.create-btn {
+    background-color: #D33853;
+    border-radius: 20px;
+    color: white;
+    border: none;
+    height: 30px;
+    font-weight: bolder;
+    margin-top: 20px;
 }

@@ -114,7 +114,8 @@ const MainPage = () => {
           </button>
         </div>
         :
-        <button onClick={handleStart}>Start!</button>
+        <div>
+        <button className={styles['start-btn']} onClick={handleStart}>Start!</button>
       }
     </div>
   )

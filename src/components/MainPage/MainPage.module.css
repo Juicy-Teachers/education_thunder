@@ -49,6 +49,18 @@
   color: #D33853;
 }
 
+.start-btn {
+  width: 125px;
+  height: 30px;
+  border: none;
+  border-radius: 20px;
+  background-color: #61B775;
+  color: white;
+  font-weight: bolder;
+  margin-left: 45%;
+  margin-bottom: 50%;
+}
+
 .question-container {
   font-family: "Grandstander";
   margin: auto;
