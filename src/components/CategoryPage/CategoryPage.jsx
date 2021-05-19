@@ -3,7 +3,7 @@ import styles from '../CategoryPage/Category.module.css'
 import TheContext from '../../context/index'
 import NavBar from '../NavBar/NavBar'
 import {useHistory} from 'react-router-dom';
-import Animals from '../../images/Quisbee_animals.png';
+import Dolphin from '../../images/Quisbee_dolphin.png';
 import Apple from '../../images/Quisbee_apple.png';
 import SocialStudies from '../../images/Quisbee_SS.png';
 import Money from '../../images/Quisbee_money.png';
@@ -17,7 +17,7 @@ export default function CategoryPage() {
         {
             name: 'Animals',
             key: 'animals',
-            photo_url: Animals
+            photo_url: Dolphin
         },
         {
             name: "Social Studies",
