@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styles from './MainPage.module.css';
 import axios from 'axios';
 import NavBar from '../../components/NavBar/NavBar';
+import APIurl from '../../config'
 
 const MainPage = () => {
   const [data, setData] = useState([]);
@@ -18,14 +19,14 @@ const MainPage = () => {
   useEffect(() => {
     ( async() => {
       try {
-        const response = await axios.get(`https://opentdb.com/api.php?amount=13&category=27&difficulty=easy&type=multiple`);
-        setData(response.data.results);
-        setRandomQuestion(response.data.results[Math.floor(Math.random() * response.data.results.length)])
+        const response = await axios.get(`https://quisbee.herokuapp.com/trivia`);
+        setData(response);
+        setRandomQuestion(response.data[Math.floor(Math.random() * response.data.length)])
       } catch (err) {
         console.error(err)
       }
     })()
-  }, [toggleButton])
+  }, [])
   
   return (
     <div>
@@ -35,10 +36,13 @@ const MainPage = () => {
           {randomQuestion.question}
         </h1>
         <div className={styles['choices-btns']}>
-          <button>Choice 1</button>
-          <button>Choice 2</button>
-          <button>Choice 3</button>
-          <button>Choice 4</button>
+          {/* {
+            randomQuestion.answers.map((answer) => {
+              return (
+                <button>{answer}</button>
+              )
+            })
+          } */}
         </div>
         <button className={styles['next-btn']} onClick={handleClick}>
           <p className={styles['next-question']}>NEXT QUESTION</p>
