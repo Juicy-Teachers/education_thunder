@@ -71,11 +71,13 @@ const MainPage = () => {
         <div className={styles['scoreboard']}>
           <div className={styles['current-score']}>
             {score}
+            <p className={styles['score-word']}>Score</p>
           </div>
         </div>
         <div className={styles['timer']}>
           <div className={styles['time-remaining']}>
             {timer}
+            <p className={styles['time-word']}>Time</p>
           </div>
         </div>
       </div>
@@ -85,15 +87,13 @@ const MainPage = () => {
           <h1 className={styles['render-question']}>
             {randomQuestion.question}
           </h1>
-          <div className={styles['choices-btns']}>
+          <div className={styles['choices-div']}>
             {
-              
               randomQuestion.answers.map((answer) => {
                 return (
-                  <button onClick={handleScore} value={answer}>{answer}</button>
+                  <button className={styles['choices-btn']} onClick={handleScore} value={answer}>{answer}</button>
                 )
               })
-              
             }
           </div>
           <button className={styles['next-btn']} onClick={handleNextQues}>
