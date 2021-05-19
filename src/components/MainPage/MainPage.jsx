@@ -2,7 +2,6 @@ import React, { useState, useEffect, useContext } from 'react';
 import styles from './MainPage.module.css';
 import axios from 'axios';
 import NavBar from '../../components/NavBar/NavBar';
-import APIurl from '../../config';
 import TheContext from '../../context/index';
 
 
@@ -10,8 +9,9 @@ const MainPage = () => {
   const [start, setStart] = useState(false)
   const [randomQuestion, setRandomQuestion] = useState({});
   const [toggleButton, setToggleButton] = useState(true);
+  const [gameOver, setGameOver] = useState(false)
   const [score, setScore] = useState(0);
-  const [timer, setTimer] = useState(0);
+  const [timer, setTimer] = useState(60);
   const context = useContext(TheContext)
   // const [category, setCategory] = useState('')
 
@@ -29,6 +29,23 @@ const MainPage = () => {
     })()
   }, [toggleButton])
 
+
+  const timerFunc = (time) => {
+    let amount = time
+    if (start) {
+      for(let i = 0; i < amount; i++){
+      setTimeout(() => {
+      setTimer(timer - 1)
+      if (timer <= 0 ) {
+        setGameOver(true)
+        setStart(false)
+      }
+    }, 1000);
+    }
+    }
+    return timer
+  }
+    
   const handleNextQues = () => {
     setToggleButton(!toggleButton)
   }
@@ -44,13 +61,6 @@ const MainPage = () => {
   const handleStart = () => {
     setStart(true)
   }
-
-  //click the right choice
-    //+= 100
-  //click wrong choice
-    //do nothing
-  //click the right choice after the wrong choice once
-    //+= 50
 
   const correctChoice = () => {
     setScore(score + 100)
@@ -76,12 +86,15 @@ const MainPage = () => {
         </div>
         <div className={styles['timer']}>
           <div className={styles['time-remaining']}>
-            {timer}
+            {timerFunc(60)}
             <p className={styles['time-word']}>Time</p>
           </div>
         </div>
       </div>
       {
+        gameOver?
+        <h1>Times Up!</h1>
+        :
         start ?
         <div className={styles['question-container']}>
           <h1 className={styles['render-question']}>

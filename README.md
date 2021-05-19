@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+# Education Thunder
+=======
 # Quisbee  
 
 ## Hackathon Collaborative Project  
@@ -8,12 +11,13 @@ Live Site: [Quisbee](http://wwww.quisbee.netlify.app)
 
 ## UX/UI Design Prototypes
 
-![Welcome Screen](public/images/Quisbee_Welcome.png)
+![Welcome Screen](src/images/Quisbee_Welcome.png)
 
-![Intro](public/images/Quisbee_Intro@3x.png)  
+![Intro](src/images/Quisbee_Intro@3x.png)  
 
-![Avatar Select](public/images/Quisbee_Avatar_Select@3x.png)
+![Avatar Select](src/images/Quisbee_Avatar_Select@3x.png)
 
-![Question](public/images/Quisbee_MC_Question.png)
+![Question](src/images/Quisbee_MC_Question.png)
 
-![Educator](public/images/Quisbee_Educator_Input.png)
+![Educator](src/images/Quisbee_Educator_Input.png)
+>>>>>>> origin/dev
