@@ -5,7 +5,6 @@ import NavBar from '../NavBar/NavBar'
 import {useHistory} from 'react-router-dom'
 
 export default function CategoryPage() {
-
     const context = useContext(TheContext)
     const history = useHistory()
 
@@ -36,8 +35,6 @@ export default function CategoryPage() {
         context.setCategory(event.target.value)
         history.replace('/main')
     }
-
-
 
     return(
         <div>

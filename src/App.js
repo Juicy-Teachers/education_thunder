@@ -7,8 +7,6 @@ import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import TheContext from './context/index';
 import CreateQuiz from './components/CreateQuiz/CreateQuiz';
 
-
-
 const routes = [
   {
     Component: MainPage,
@@ -32,18 +30,15 @@ const routes = [
   }
 ]
 
-
 function App() {
   const [category, setCategory] = useState()
-  
-
 
   return (
     <TheContext.Provider value={{
       category: category,
       setCategory: setCategory
     }}>
-      <Router >
+      <Router>
         <Switch>
           {
             routes.map(({Component, key, path}) => {
