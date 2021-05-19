@@ -71,9 +71,6 @@ const MainPage = () => {
     setScore(score - 50)
   }
 
-
-  
-  console.log(randomQuestion.answers);
   return (
     <div>
       <NavBar />
@@ -114,11 +111,12 @@ const MainPage = () => {
           </button>
         </div>
         :
-        <div>
-        <button className={styles['start-btn']} onClick={handleStart}>Start!</button>
+        <div className={styles['start-btn-div']}>
+          <button className={styles['start-btn']} onClick={handleStart}>Start!</button>
+        </div>
       }
     </div>
-  )
+    )
 }
 
 export default MainPage;
