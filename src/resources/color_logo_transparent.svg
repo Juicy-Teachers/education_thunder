@@ -19,7 +19,7 @@
        type="text/css">@import url(&quot;https://fonts.googleapis.com/css2?family=Nova+Square:wght@400&quot;);</style></defs><defs
      id="defs6" /><g
      id="icon"
-     transform="matrix(0.23 0 0 0.23 124.8 222.5)"><g
+     transform="matrix(0.23 0 0 0.23 118.63 222.5)"><g
        id="g147"
        style=""><g
          id="icon_piece"
@@ -367,12 +367,12 @@
            style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: url(#SVGID_24); fill-rule: nonzero; opacity: 1;" /></g></g></g><g
      id="logo-name"
      style=""
-     transform="matrix(2.25 0 0 2.25 347.14 223.62)"><linearGradient
+     transform="matrix(2.33 0 0 2.33 347.18 223.66)"><linearGradient
        y2="33.89999999999999"
        x2="0"
        y1="0"
        x1="0"
-       gradientTransform="matrix(1 0 0 1 -61.31 -16.95)"
+       gradientTransform="matrix(1 0 0 1 -61.77 -16.95)"
        gradientUnits="userSpaceOnUse"
        id="SVGID_2"><stop
          id="stop150"
@@ -387,5 +387,5 @@
        xml:space="preserve"><tspan
          id="tspan153"
          y="9.42"
-         x="-61.31">QUIZBEE</tspan></text>
+         x="-61.77">QUISBEE</tspan></text>
 </g></svg>
