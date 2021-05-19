@@ -6,7 +6,7 @@ import CategoryPage from './components/CategoryPage/CategoryPage'
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import TheContext from './context/index';
 import CreateQuiz from './components/CreateQuiz/CreateQuiz';
-import Questions from './components/CategoryPage/Questions';
+
 
 
 const routes = [
@@ -34,14 +34,14 @@ const routes = [
 
 
 function App() {
-  const [categoryNum, setCategoryNum] = useState()
+  const [category, setCategory] = useState()
   
 
 
   return (
     <TheContext.Provider value={{
-      categoryNum: categoryNum,
-      setCategoryNum: setCategoryNum
+      category: category,
+      setCategory: setCategory
     }}>
       <Router >
         <Switch>
