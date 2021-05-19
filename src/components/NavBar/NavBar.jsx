@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import styles from '../NavBar/NavBar.module.css';
-import {useHistory} from 'react-router-dom'
+import {useHistory} from 'react-router-dom';
 
 const NavBar = () => {
 

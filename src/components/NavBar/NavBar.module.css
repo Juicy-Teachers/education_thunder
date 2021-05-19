@@ -4,8 +4,10 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  background-color: #EFF1F4
-  ;
+  background-color: #EFF1F4;
+  z-index: 4;
+  position: relative;
+  top: 0;
 }
 
 .nav-icons {
