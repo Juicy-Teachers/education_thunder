@@ -1,12 +1,49 @@
+.score-timer-container {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: fill-available;
+}
+
+.scoreboard {
+  height: 150px;
+  width: 300px;
+  border: 1px solid black;
+}
+
+.current-score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 100px;
+}
+
+.time-remaining {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 100px;
+}
+
+.timer {
+  height: 150px;
+  width: 300px;
+  border: 1px solid black;
+}
+
 .question-container {
   font-family: "Grandstander";
   margin: auto;
-  margin-top: 10%;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
+  background-image: url(../../resources/QuizbeeBackground.png);
+  background-size: 1500px 780px;
 }
 
 .render-question {
@@ -31,4 +68,6 @@
   font-weight: bold;
   font-family: "Grandstander";
   font-size: 30px;
+  
 }
+
