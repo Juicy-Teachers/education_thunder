@@ -9,7 +9,7 @@ const MainPage = () => {
   const [randomQuestion, setRandomQuestion] = useState({});
   const [toggleButton, setToggleButton] = useState(true);
   const [score, setScore] = useState(0);
-  const [timer, setTimer] = useState([]);
+  const [timer, setTimer] = useState(0);
   const context = useContext(TheContext)
   // const [category, setCategory] = useState('')
 
@@ -18,7 +18,7 @@ const MainPage = () => {
   }
 
   const handleScore = (event) => {
-      if(event.target.value == randomQuestion.correct) {
+      if(event.target.value === randomQuestion.correct) {
         correctChoice()
       } else {
         incorrectChoice()
@@ -45,8 +45,9 @@ const MainPage = () => {
     (async() => {
       try {
         const res = await axios.get(`https://quisbee.herokuapp.com/trivia`);
-        const response = res.data.filter(question => question.category === context.category)
+        const response = res.data.filter(question => question.category == context.category)
         setRandomQuestion(response[Math.floor(Math.random() * response.length)])
+        console.log(response)
       } catch (err) {
         console.error(err)
       }
@@ -70,19 +71,18 @@ const MainPage = () => {
       </div>
       <div className={styles['question-container']}>
         <h1 className={styles['render-question']}>
-          {/* {randomQuestion.question} */}
+          {randomQuestion.question}
         </h1>
         <div className={styles['choices-btns']}>
-          {/* {
-            randomQuestion.answers.length ?
+          {
+            
             randomQuestion.answers.map((answer) => {
               return (
                 <button onClick={handleScore} value={answer}>{answer}</button>
               )
             })
-            :
-            ""
-          } */}
+            
+          }
         </div>
         <button className={styles['next-btn']} onClick={handleNextQues}>
           <p className={styles['next-question']}>NEXT QUESTION</p>
