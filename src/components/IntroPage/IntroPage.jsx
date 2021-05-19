@@ -23,6 +23,11 @@ export default function IntroPage(props) {
             <Link to='/category' style={{textDecoration: 'none'}}>
                 <Button className={btnStyles.root} variant="contained" color="primary" size="large">Play!</Button>
             </Link>
+            <Link to='/create' style={{textDecoration: 'none'}}>
+                <button>
+                    Create
+                </button>
+            </Link>
         </div>
     )
 }
