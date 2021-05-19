@@ -6,6 +6,7 @@ import {useHistory} from 'react-router-dom'
 import Animals from '../../images/Quisbee_animals.png';
 import Apple from '../../images/Quisbee_apple.png';
 import SocialStudies from '../../images/Quisbee_SS.png';
+import Money from '../../images/Quisbee_book.png';
 
 export default function CategoryPage() {
     const context = useContext(TheContext)
@@ -29,7 +30,8 @@ export default function CategoryPage() {
         },
         {
             name: 'Money',
-            key: 'money'
+            key: 'money',
+            photo_url: Money
         },
         {
             name: 'Space',
