@@ -7,9 +7,9 @@ const Questions = () => {
 
     useEffect(() => {
         axios(`${APIurl}/trivia`).then((res) => setQuestions(res.data)).catch(console.error) 
+        console.log(questions)
     }, [])
     if (!questions.length){
-        console.log(questions)
         return <h1> loading...</h1>
     }
 
