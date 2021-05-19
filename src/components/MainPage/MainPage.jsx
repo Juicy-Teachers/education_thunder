@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// import styles from './MainPage.module.css';
+import styles from './MainPage.module.css';
 import axios from 'axios';
 import NavBar from '../../components/NavBar/NavBar';
 
@@ -20,8 +20,7 @@ const MainPage = () => {
       try {
         const response = await axios.get(`https://opentdb.com/api.php?amount=13&category=27&difficulty=easy&type=multiple`);
         setData(response.data.results);
-        console.log(response)
-        await setRandomQuestion(response.data.results[Math.floor(Math.random() * response.data.results.length)])
+        setRandomQuestion(response.data.results[Math.floor(Math.random() * response.data.results.length)])
       } catch (err) {
         console.error(err)
       }
@@ -31,9 +30,20 @@ const MainPage = () => {
   return (
     <div>
       <NavBar />
-      <h1>This is the Main Page</h1>
-      <h1>{randomQuestion.question}</h1>
-      <button onClick={handleClick}>Get Question!</button>
+      <div className={styles['question-container']}>
+        <h1 className={styles['render-question']}>
+          {randomQuestion.question}
+        </h1>
+        <div className={styles['choices-btns']}>
+          <button>Choice 1</button>
+          <button>Choice 2</button>
+          <button>Choice 3</button>
+          <button>Choice 4</button>
+        </div>
+        <button className={styles['next-btn']} onClick={handleClick}>
+          <p className={styles['next-question']}>NEXT QUESTION</p>
+        </button>
+      </div>
     </div>
   )
 
