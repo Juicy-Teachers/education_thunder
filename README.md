@@ -6,7 +6,7 @@ An educational quiz app for kids brought to you by a random group of Engineers, 
 
 Live Site: [Quisbee](http://www.quisbee.netlify.app)
 
-## UX/UI Design Prototypes
+## Design Prototypes
 
 ![Welcome Screen](src/images/Quisbee_Welcome.png)
 
@@ -17,5 +17,3 @@ Live Site: [Quisbee](http://www.quisbee.netlify.app)
 ![Question](src/images/Quisbee_MC_Question.png)
 
 ![Educator](src/images/Quisbee_Educator_Input.png)
-
-test
