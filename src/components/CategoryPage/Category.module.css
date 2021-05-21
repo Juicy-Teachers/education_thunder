@@ -50,6 +50,7 @@
     background-color: #61B775;
     color: white;
     font-weight: bolder;
+    cursor: pointer;
 }
 
 .category-question {
