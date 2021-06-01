@@ -1,17 +1,26 @@
+.create-page-container {
+  background-image: url(../../resources/QuisbeeBackground.png);
+}
+
 .form-container {
-  border: 1px solid black;
+  border: 3px solid black;
   width: 480px;
-  height: 380px;
+  height: 420px;
   border-radius: 6px;
   font-family: "Open Sans";
   margin: auto;
   margin-top: 10%;
+  background: white;
+}
+
+.choices-header {
+  font-weight: bold;
 }
 
 .bottom-divider {
   display: block;
   width: 90%;
-  height: 1px;
+  height: 3px;
   background: black;
   margin: auto;
 }
@@ -26,9 +35,42 @@
   width: 385px;
   height: 45px;
   font-family: Arial, Helvetica, sans-serif;
+  border: 3px solid black;
+  border-radius: .30rem;
+}
+
+.question-input:focus {
+  outline-color: #65BAB6;
 }
 
 .answers {
   display: flex;
   flex-direction: column;
+}
+
+.answers input {
+  border: 2px solid black;
+  border-radius: .30rem;
+}
+
+.add-button-div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 20px;
+}
+
+.add-button {
+  width: 60px;
+  height: 30px;
+  background-color: #61B775;
+  color: white;
+  font-weight: bolder;
+  border-radius: .25rem;
+  border: none;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  transform: scale(1.1);
 }
