@@ -8,7 +8,7 @@
     background-image: url(../../resources/QuisbeeBackground.png);
     background-size: 1500px 780px;
     background-size: cover;
-    position: fill; 
+    position: fixed; 
     top: 0; 
     left: 0;
     min-width: 100%;
