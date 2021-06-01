@@ -1,3 +1,12 @@
+body {
+  --green: #61B775;
+  --orange: #DE7D34;
+  --navy: #1A0B4A;
+  --red: #D33753;
+  --teal: #65BAB6;
+  --yellow: #F2D429;
+}
+
 .score-timer-container {
   display: inline-flex;
   justify-content: center;
