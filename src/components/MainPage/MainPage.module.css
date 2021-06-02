@@ -97,12 +97,13 @@ body {
   left: 0;
   min-width: 100%;
   min-height: 100%;
-  margin-top: 10%;
 }
 
 .render-question {
   font-weight: 400px;
   font-size: 38px;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .choices-div {
@@ -147,4 +148,59 @@ body {
   font-family: "Grandstander";
   font-size: 30px;
   margin: auto;
+}
+
+.time-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 415px) {
+  .score-timer-container {
+    max-width: 300px;
+    padding: 10%;
+  }
+  .start-btn-div {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .start-btn {
+    width: 150px;
+    margin-left: unset;
+    margin-bottom: unset;
+  }
+  .time-remaining, 
+  .current-score {
+    font-size: 50px;
+  }
+  .question-container {
+    position: unset;
+    height: auto;
+  }
+  .render-question {
+    font-size: 30px;
+  }
+  .choices-div {
+    flex-direction: column;
+    max-height: 200px;
+    max-width: 150px;
+    justify-content: center;
+    align-items: center;
+  }
+  .choices-btn {
+    width: 150px;
+  }
+  .next-btn {
+    max-height: 200px;
+    max-width: 250px;
+    margin-top: 40px;
+    margin-bottom: 100px;
+  }
+  .next-btn:hover,
+  .choices-btn:hover {
+    transform: unset;
+  }
 }
