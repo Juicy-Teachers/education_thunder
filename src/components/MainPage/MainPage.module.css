@@ -102,8 +102,7 @@ body {
 .render-question {
   font-weight: 400px;
   font-size: 38px;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  text-align: center;
 }
 
 .choices-div {
