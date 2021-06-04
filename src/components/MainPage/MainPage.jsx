@@ -90,7 +90,7 @@ const MainPage = () => {
       </div>
       {
         gameOver?
-        <h1>Times Up!</h1>
+        <h1 className={styles['time-up']}>Time's Up!</h1>
         :
         start ?
         <div className={styles['question-container']}>

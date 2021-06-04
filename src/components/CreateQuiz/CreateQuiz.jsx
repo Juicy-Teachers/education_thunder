@@ -52,7 +52,7 @@ const body = {
   }
 
   return (
-		<div>
+		<div className={styles['create-page-container']}>
 			<NavBar />
 			<form className={styles['form-container']} onSubmit={handleFormSubmit}>
 				<div className={styles['input-fields']}>
@@ -73,6 +73,12 @@ const body = {
 							<p className={styles['choices-header']}>
 								Choices (Correct First)
 							</p>
+							<label htmlFor='category'>
+								<option name='category'>
+									Category: Custom
+								</option>
+							</label>
+							<br />
 							<input
 								// onChange={handleChange}
 								type='text'
@@ -111,20 +117,16 @@ const body = {
 								placeholder='Choice 4'
 							/>
 						</label>
-						<br />
-						<label htmlFor='category'>
-							<option name='category'>
-								Custom
-							</option>
-						</label>
 					</div>
 				</div>
 				<div className={styles['bottom-divider']}>
 					<span></span>
 				</div>
-				<button type='submit' className={styles['add-button']}>
-					Add
-				</button>
+				<div className={styles['add-button-div']}>
+					<button type='submit' className={styles['add-button']}>
+						Add
+					</button>
+				</div>
 			</form>
 		</div>
 	);

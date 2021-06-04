@@ -47,7 +47,7 @@ export default function CategoryPage() {
     }
 
     return(
-        <div>
+        <div className={styles['category-container']}>
             <NavBar />
             <main className={styles["main"]}>
                 <div className={styles["button-div"]}>
